@@ -15,6 +15,8 @@
 			"States": [
 				{
 					"Image": "imgs/actions/battery/key-default",
+					"ShowTitle": true,
+					"Title": "",
 					"TitleAlignment": "middle"
 				}
 			]

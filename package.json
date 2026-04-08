@@ -5,6 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"build": "rolldown -c rolldown.config.ts",
+		"deploy": "node scripts/deploy-plugin.mjs",
 		"watch": "rolldown -c rolldown.config.ts -w",
 		"icons": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/generate-icons.ps1",
 		"fetch-assets": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/fetch-assets.ps1"

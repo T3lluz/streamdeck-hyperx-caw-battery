@@ -16,7 +16,10 @@ import json
 import sys
 import time
 
-import hid
+try:
+    import hid
+except ImportError:
+    hid = None  # type: ignore[assignment, misc]
 
 VID = 0x03F0
 PID = 0x098D
@@ -106,6 +109,13 @@ def _try_path(path: bytes | str) -> tuple[int, bool, str] | None:
 
 
 def read_battery() -> dict:
+    if hid is None:
+        return {
+            "ok": False,
+            "error": "Python hidapi not installed. Run: pip install hidapi",
+            "error_code": "import_error",
+        }
+
     entries: list[dict] = []
     for info in hid.enumerate(VID, PID):
         p = info.get("path")
@@ -154,6 +164,9 @@ def read_battery() -> dict:
 
 
 def cmd_list() -> int:
+    if hid is None:
+        print("hidapi not installed. Run: pip install hidapi", file=sys.stderr)
+        return 1
     rows = [i for i in hid.enumerate(VID, PID) if i.get("path")]
     if not rows:
         print(f"No HID paths for VID=0x{VID:04x} PID=0x{PID:04x}")

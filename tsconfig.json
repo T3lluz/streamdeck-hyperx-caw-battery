@@ -1,12 +1,10 @@
 {
 	"extends": "@tsconfig/node20/tsconfig.json",
 	"compilerOptions": {
-		"rootDir": "src",
-		"outDir": "com.t3lluz.hyperxcawbattery.sdPlugin/bin",
-		"experimentalDecorators": true,
+		"experimentalDecorators": false,
 		"emitDecoratorMetadata": false,
 		"verbatimModuleSyntax": true,
-		"moduleResolution": "bundler",
+		"moduleResolution": "nodenext",
 		"noEmit": true
 	},
 	"include": ["src/**/*.ts", "rolldown.config.ts"]
