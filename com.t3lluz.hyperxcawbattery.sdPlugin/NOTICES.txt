@@ -1,0 +1,13 @@
+Third-party assets:
+
+1) Outfit variable font
+   - Files: fonts/Outfit-Variable.ttf, fonts/OFL-Outfit.txt
+   - License: SIL Open Font License 1.1
+   - Source: https://github.com/google/fonts/tree/main/ofl/outfit
+
+2) Heroicons — "bolt" solid path (24×24), embedded in plugin JavaScript
+   - License: MIT
+   - Source: https://github.com/tailwindlabs/heroicons
+
+HID protocol for HyperX Cloud Alpha Wireless is implemented from public community documentation
+(e.g. ArchWiki "HyperX Cloud Alpha Wireless", HyerpxAlpha-Linux) and is not affiliated with HP/HyperX.

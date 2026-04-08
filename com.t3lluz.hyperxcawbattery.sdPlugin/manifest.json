@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+	"Name": "HyperX Cloud Alpha Wireless Battery",
+	"Version": "1.0.0",
+	"Author": "T3lluz",
+	"Actions": [
+		{
+			"Name": "Headset battery",
+			"UUID": "com.t3lluz.hyperxcawbattery.battery",
+			"Icon": "imgs/actions/battery/icon",
+			"Tooltip": "Large battery readout for HyperX Cloud Alpha Wireless (Outfit font, red text). Uses bundled Python HID reader.",
+			"PropertyInspectorPath": "ui/battery.html",
+			"Controllers": ["Keypad"],
+			"UserTitleEnabled": false,
+			"States": [
+				{
+					"Image": "imgs/actions/battery/key-default",
+					"TitleAlignment": "middle"
+				}
+			]
+		}
+	],
+	"Category": "HyperX CAW Battery",
+	"CategoryIcon": "imgs/plugin/category",
+	"CodePath": "bin/plugin.js",
+	"Description": "Live battery percentage with large red text and a charging bolt when the dongle reports USB charging. Bundled Outfit font (OFL) and Heroicons bolt (MIT).",
+	"Icon": "imgs/plugin/marketplace",
+	"SDKVersion": 3,
+	"Software": {
+		"MinimumVersion": "6.9"
+	},
+	"OS": [
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		}
+	],
+	"Nodejs": {
+		"Version": "20"
+	},
+	"UUID": "com.t3lluz.hyperxcawbattery"
+}
